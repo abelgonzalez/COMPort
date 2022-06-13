@@ -1,0 +1,10 @@
+- Uninstall serial with << pip uninstall serial >> fixed my problem. Then installed pyserial pip install pyserial
+
+- Additionally << pip install --upgrade --force-reinstall pyserial >>
+
+- pip3 install 'pyserial-asyncio>=0.4'
+
+- https://datatofish.com/executable-pyinstaller/
+
+- Generate .EXE (https://datatofish.com/executable-pyinstaller/): 
+In current path, execute: 
