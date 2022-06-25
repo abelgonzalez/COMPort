@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-from ctypes.wintypes import DWORD
 import os
 import sys
 import time
@@ -27,34 +26,33 @@ def main():
     BUFFER_SIZE = 37
     ROOT_DIR = os.path.abspath(os.curdir)
 
-    # --> Default configs
-    PARTICIPANT_NAME = "Lucas"
-    PARTICIPANT_BIRTH = 20/10/1996
-    PARTICIPANT_AGE = 26
-
     # Temperature parameters
     MIN_TEMP = 35
-    NORMAL_TEMP = 36.5
     MAX_TEMP = 37.5
 
     # HR parameters
-    # Tanaka method FC máxima = 220 - (0,7x idade)
+    # Tanaka method FC max = 220 - (0,7x age)
     MIN_HR = 50
-    NORMAL_HR = 65
     MAX_HR = 203.20
-
-    # RRInterval
-    MIN_RR = 450
-    MAX_RR = 600
 
     # Lists declaration
     listID = []
     listHR = []
+    listBin = []
+    listHex = []
+    listGyroX = []
+    listGyroY = []
+    listGyroZ = []
     listRRInterval = []
     listTemperature = []
-    listBin = listHex = []
-    listGyroX = listGyroY = listGyroZ = []
-    listAccelerometerX = listAccelerometerY = listAccelerometerZ = []
+    listAccelerometerX = []
+    listAccelerometerY = []
+    listAccelerometerZ = []
+
+    # --> Data sample
+    PARTICIPANT_NAME = "Lucas"
+    PARTICIPANT_BIRTH = 20/10/1996
+    PARTICIPANT_AGE = 26
 
     # --> User's input
     print("Enter the participant's name. Ex: Lucas")
@@ -103,7 +101,6 @@ def main():
         linesToReadStr = (int)(LINES_TO_READ)
         remainingLines = linesToReadStr
         index = 0
-        id_index = 0
 
         print(serialPort)
         print('\n')
@@ -111,16 +108,16 @@ def main():
             ">>>>>> To stop the capture at any time, press Ctrl+C <<<<<<")
         print('\n')
 
-        # Visualization initialization
+        # Visualization init
         graphHR = pg.plot()
         graphTemp = pg.plot()
 
         setPyQtGraph(graphHR, "Live HR Stream from " + str(PORT),
-                     "Beats per minute", "Time (one plot = 2 secs)",
+                     "Beats per minute", "Time (one plot = 1 sec)",
                      MAX_HR, MIN_HR, int(LINES_TO_READ)*2)
 
         setPyQtGraph(graphTemp, "Live Temperature Stream from " + str(PORT),
-                     "Temp (celcius)", "Time (one plot = 2 secs)",
+                     "Temp (celcius)", "Time (one plot = 1 sec)",
                      MAX_TEMP, MIN_TEMP, int(LINES_TO_READ)*2)
 
         # DATA STREAM
@@ -150,7 +147,7 @@ def main():
                         lineStr.append('{0}'.format(
                             hexadecimalStr[i * 2:i * 2 + 2]))
 
-                    listID.append(id_index)
+                    listID.append(index)
 
                     byteArray = bytearray.fromhex(lineStr[2])
                     listHR.append(int.from_bytes(byteArray, "big"))
@@ -218,7 +215,6 @@ def main():
 
                     remainingLines -= 1
                     index += 1
-                    id_index += 2
                     print('\n')
 
                 except:
