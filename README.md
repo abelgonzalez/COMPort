@@ -55,7 +55,7 @@ Download and install:
  - Install [Null-modem emulator](https://sourceforge.net/projects/com0com/) and check that all parameters are like the image below:
 <h1 align="center">
   <img 
-    src="./Doc/nullModem.jpg"
+    src="./Doc/nullModem.png"
   />
 </h1>
 
