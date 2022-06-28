@@ -8,7 +8,6 @@ import binascii
 import pyqtgraph as pg
 
 from modules.report import *
-from modules.analysis import *
 from modules.receiver import *
 from modules.visualization import *
 
