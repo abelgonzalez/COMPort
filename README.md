@@ -56,7 +56,7 @@ Also, check that the virtual ports are listed in Device Manager as follows:
 Note: You may have a different COM number if your PC has other components.
 
 
-- Install [COM Port Data Emulator](https://www.aggsoft.com/com-port-emulator/download.htm). This one generates the traffic needed for the COM port using data from a .bin file.
+- Install [COM Port Data Emulator](https://www.aggsoft.com/com-port-emulator/download.htm). This one generates the traffic needed for the COM port using data from a .bin file, located in input project folder.
 In the end, check that all parameters in the Device menu are like the image below:
 <h1 align="center">
   <img 
