@@ -33,6 +33,55 @@
 
 ---
 ## 👨‍💻 How to Setup
+Download and install: 
+ - [Python 3.7.7](https://www.python.org/downloads/release/python-377/)
+ - [Visual Studio Code 1.67.2](https://code.visualstudio.com/Download)
+ - [Null-modem emulator](https://sourceforge.net/projects/com0com/)
+ - [COM Port Data Emulator](https://www.aggsoft.com/com-port-emulator/download.htm)
+ - [Virtual Serial Port Driver](https://www.eltima.com/vspd-post-download.html?_ga=2.148845943.135235865.1634060891-52484055.1634060891)
+ 
+ - Install [Null-modem emulator](https://sourceforge.net/projects/com0com/). This software create a virtual portal (COM3, COM4) that we will use it. When finished, it will ask to install a Virtual Device. Accept it.
+At the end, check that all parameters are like the image below:
+<h1 align="center">
+  <img 
+    src="./Doc/nullModem.png"
+  />
+</h1>
+
+Also, check that the virtual ports are listed in Device Manager as follow:
+<h1 align="center">
+  <img 
+    src="./Doc/deviceManager.jpg"
+  />
+</h1>
+Note: You may have a different COM number if your PC has other components.
+
+
+- Install [COM Port Data Emulator](https://www.aggsoft.com/com-port-emulator/download.htm). This one it generates the traffic needed for the COM port using data from a .bin file.
+At the end, check that all parameters in Device menu are like the image below:
+<h1 align="center">
+  <img 
+    src="./Doc/dataEmulator1.png"
+  />
+</h1>
+
+Also, check that the Data source is setted as follow:
+<h1 align="center">
+  <img 
+    src="./Doc/dataEmulator2.jpg"
+  />
+</h1>
+
+
+- Install [Virtual Serial Port Driver](https://www.eltima.com/vspd-post-download.html?_ga=2.148845943.135235865.1634060891-52484055.1634060891). This software allow us to view traffic and apps that are connected with COM ports. Once installed, click on "New bundle" / "Share" and select the COM3 port in the "Real port to share" option.
+When finished, something similar to the image below should appear. This way the Virtual Serial Port Drive is listening to COM3 waiting for some activity.
+<h1 align="center">
+  <img 
+    src="./Doc/virtualSerial.png"
+  />
+</h1>
+ 
+  
 ```bash
   # Clone the project
   $ git clone https://github.com/abelgonzalez/COMPort.git
@@ -42,37 +91,46 @@
   $ cd COMPort
 ```
 
-Download and install: 
- - [Python 3.7.7](https://www.python.org/downloads/release/python-377/)
- - [Visual Studio Code 1.67.2](https://code.visualstudio.com/Download)
- - [Null-modem emulator](https://sourceforge.net/projects/com0com/)
- - [COM Port Data Emulator](https://www.aggsoft.com/com-port-emulator/download.htm)
- - [Virtual Serial Port Driver](https://www.eltima.com/vspd-post-download.html?_ga=2.148845943.135235865.1634060891-52484055.1634060891)
  
 
 ---
 ## 😎 How to Run
- - Install [Null-modem emulator](https://sourceforge.net/projects/com0com/) and check that all parameters are like the image below:
+- Open the COM Port Data Emulator and Virtual Serial Port apps.
+- In COM Port Data Emulator, click on the Start button
+- The following should appear:
 <h1 align="center">
   <img 
-    src="./Doc/nullModem.png"
+    src="./Doc/dataTx.png"
   />
 </h1>
+On the left, COM Port Data Emulator appears, indicating that Tx information is present, and on the right, Virtual Serial Port Driver Pro informs that COM3 is being used, that it has some active activity.
 
-
-Working here------->
-
- - 
- -   main.py:68, set the root project path were all Python projects are allowed. Example:
-    DIR = r'C:\Users\abelg\GoDev\My Drive\Github'
- - In main.py:69, set the path were you want to export the requeriments.txt file. Example: 
-    EXPORT_DIR = r'C:\Users\abelg\GoDev\My Drive\Github\UnifyRequirements'
+Now, we will run our script
  
- - In root folder (**UnifyRequirements**) run:
+- In root folder (**COMPort**) run:
   ```bash
     # Run
     $ python main.py
   ```
+- It will apper "Enter the participant's name. Ex: Lucas" message. Fill it and press Enter
+- Then, will appear "Enter the participant's date of birth in DD/MM/YYYY format. Ex: 20/10/1996". Isert it with DD/MM/YYYY format and press Enter.
+- Then,  "Which HRmax analysis method do you want to use? Enter the number only. Ex: 1" message appears. Pick one and press Enter.
+- Insert the COM port in "Enter the port to connect and press Enter. Ex: COM3" message and press Enter.
+- Finally, define how many seconds you want to capture in "Enter the quantity of measurements to capture and press Enter. Ex: 10" message. Insert it and press Enter.
+
+
+
+
+We will see all data Tx as follow
+<h1 align="center">
+  <img 
+    src="./Doc/dataTx.png"
+  />
+</h1>
+
+Note:
+- Check that the info is being Tx through COM3.
+- After installing all the components, restart the computer if the reception of data in Python is not working.
 
 ---
 ## 👉 Additional information
