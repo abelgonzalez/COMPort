@@ -6,7 +6,7 @@
 
 <h1 align="center">
   <img 
-    src="./Doc/demo.gif"
+    src="./doc/demo.gif"
   />
 </h1>
 
@@ -43,14 +43,14 @@ Download and install:
 In the end, check that all parameters are like the image below:
 <h1 align="center">
   <img 
-    src="./Doc/nullModem.png"
+    src="./doc/nullModem.png"
   />
 </h1>
 
 Also, check that the virtual ports are listed in Device Manager as follows:
 <h1 align="center">
   <img 
-    src="./Doc/deviceManager.jpg"
+    src="./doc/deviceManager.jpg"
   />
 </h1>
 Note: You may have a different COM number if your PC has other components.
@@ -60,14 +60,14 @@ Note: You may have a different COM number if your PC has other components.
 In the end, check that all parameters in the Device menu are like the image below:
 <h1 align="center">
   <img 
-    src="./Doc/dataEmulator1.png"
+    src="./doc/dataEmulator1.png"
   />
 </h1>
 
 Also, check that the Data source is set as follows:
 <h1 align="center">
   <img 
-    src="./Doc/dataEmulator2.jpg"
+    src="./doc/dataEmulator2.jpg"
   />
 </h1>
 
@@ -76,7 +76,7 @@ Also, check that the Data source is set as follows:
 When finished, something similar to the image below should appear. This way, the Virtual Serial Port Drive listens to COM3, waiting for some activity.
 <h1 align="center">
   <img 
-    src="./Doc/virtualSerial.png"
+    src="./doc/virtualSerial.png"
   />
 </h1>
  
@@ -98,7 +98,7 @@ When finished, something similar to the image below should appear. This way, the
 - The following should appear:
 <h1 align="center">
   <img 
-    src="./Doc/dataTx.png"
+    src="./doc/dataTx.png"
   />
 </h1>
 COM Port Data Emulator appears on the left, indicating that Tx information is present. On the right, Virtual Serial Port Driver Pro informs that COM3 is being used and has some active activity.
@@ -120,27 +120,27 @@ Now, we will run our script.
 We will see all data Tx and visualizations of HR and Temperature as follow:
 <h1 align="center">
   <img 
-    src="./Doc/dataTx.png"
+    src="./doc/dataTx.png"
   />  
 </h1>
 
 <h1 align="center">
 <img 
-    src="./Doc/dataVisualization.jpg"
+    src="./doc/dataVisualization.jpg"
   />
 </h1>
 
 At the end of execution, in the output folder, we will see exported files (binary, hexadecimal, and xlsx) as follow:
 <h1 align="center">
   <img 
-    src="./Doc/output.jpg"
+    src="./doc/output.jpg"
   />
 </h1>
 
 Excel file will contain in columns all features captured and rows, the instances read from COM Port Data Emulator as follow:
 <h1 align="center">
   <img 
-    src="./Doc/outputXlsx.jpg"
+    src="./doc/outputXlsx.jpg"
   />
 </h1>
 

@@ -236,7 +236,7 @@ def main():
     timestr = time.strftime("%Y%m%d-%H%M%S")
     metada_time = timestr+'_' + \
         str(PARTICIPANT_NAME) + '_' + str(PARTICIPANT_AGE) + '_'
-    exportDir = ROOT_DIR + "/output/"
+    exportDir = ROOT_DIR + "/src/output/"
 
     # Check whether the specified path exists or not
     CheckExportPath(exportDir)
