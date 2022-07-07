@@ -55,7 +55,6 @@ Also, check that the virtual ports are listed in Device Manager as follows:
 </h1>
 Note: You may have a different COM number if your PC has other components.
 
-
 - Install [COM Port Data Emulator](https://www.aggsoft.com/com-port-emulator/download.htm). This one generates the traffic needed for the COM port using data from a .bin file, located in input project folder.
 In the end, check that all parameters in the Device menu are like the image below:
 <h1 align="center">
@@ -70,7 +69,6 @@ Also, check that the Data source is set as follows:
     src="./doc/dataEmulator2.jpg"
   />
 </h1>
-
 
 - Install [Virtual Serial Port Driver](https://www.eltima.com/vspd-post-download.html?_ga=2.148845943.135235865.1634060891-52484055.1634060891). This software allows us to view traffic and apps connected with COM ports. Once installed, click on "New bundle" / "Share" and select the COM3 port in the "Real port to share" option.
 When finished, something similar to the image below should appear. This way, the Virtual Serial Port Drive listens to COM3, waiting for some activity.
@@ -116,7 +114,6 @@ Now, we will run our script.
 - Insert the COM port in the "Enter the port to connect and press Enter. Ex: COM3" message and press Enter.
 - Finally, define how many seconds you want to capture in the "Enter the number of measurements to capture and press Enter. Ex: 10" message. Insert it and press Enter.
 
-
 We will see all data Tx and visualizations of HR and Temperature as follow:
 <h1 align="center">
   <img 
@@ -143,7 +140,6 @@ Excel file will contain in columns all features captured and rows, the instances
     src="./doc/outputXlsx.jpg"
   />
 </h1>
-
 
 Note:
 - Check that the info is being Tx through COM3. If you use a different COM port, set it in COM Port Data Emulator.
