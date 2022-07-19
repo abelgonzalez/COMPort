@@ -77,8 +77,7 @@ When finished, something similar to the image below should appear. This way, the
     src="./doc/virtualSerial.png"
   />
 </h1>
- 
-  
+   
 ```bash
   # Clone the project
   $ git clone https://github.com/abelgonzalez/COMPort.git
@@ -87,7 +86,6 @@ When finished, something similar to the image below should appear. This way, the
   # Enter directory
   $ cd COMPort
 ```
-
  
 ---
 ## 😎 How to Run
