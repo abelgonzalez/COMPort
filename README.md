@@ -1,5 +1,5 @@
 <h1 align="center">
-   <p> COMPort 🐍</p>  
+   <p> COMPort 🐍</p>
 </h1>
 
 <br>
